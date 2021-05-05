@@ -1,6 +1,5 @@
 
 class FloydsCycle {
-
     public boolean detectLoop(ListNode head) {
 	    ListNode tortoise = head;
 	    ListNode hare = head;
@@ -10,7 +9,7 @@ class FloydsCycle {
 	        tortoise=tortoise.next;
 	        hare=hare.next.next;
 	    }
-       return false;
+        return false;
     }
 
     public void print(ListNode head) {
@@ -28,7 +27,6 @@ class FloydsCycle {
         
         // fill linkedlist with integer array
     	while(i < arr.length) {
-    		// System.out.println("node value: " + node.val + " i: " + i);
 	        node.next = new ListNode(arr[i]);
 	        node = node.next;
 	        i++;
