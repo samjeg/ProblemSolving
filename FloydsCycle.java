@@ -5,7 +5,7 @@ class FloydsCycle {
 	    ListNode tortoise = head;
 	    ListNode hare = head;
 	    while(hare!=null&&hare.next!=null) {
-	        if(hare.val == tortoise.val) return true;
+	        if(hare.val == tortoise.val) return true; // loop detected
 	        
 	        tortoise=tortoise.next;
 	        hare=hare.next.next;
@@ -15,7 +15,6 @@ class FloydsCycle {
 
     public void print(ListNode head) {
     	while (head != null) {
-    		System.out.println("value: " + head.val);
     		head = head.next;
     	}
     }
