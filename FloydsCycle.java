@@ -4,10 +4,10 @@ class FloydsCycle {
         ListNode tortoise = head;
         ListNode hare = head;
         while(hare!=null&&hare.next!=null) {
-            if(hare.val == tortoise.val) return true; // loop detected
-            
             tortoise=tortoise.next;
             hare=hare.next.next;
+            
+            if(hare == tortoise) return true; // loop detected
         }
         return false;
     }
